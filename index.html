@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,53 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
+
 <body>
-    <div>
-        <h1>Online Dictionary</h1>
-        <p>Discover the meaning of every word</p>
-        <form >
-            <input
-            type="search"
-            id="search-input"
-            placeholder="Enter a word"
-            required
-            >
-            <button type="submit">Submit</button>
-        </form>
-        <p id="message"></p>
-        <section id="result"></section>
-    </div>
-    
+    <header>
+        <nav>
+            <h2>Online Dictionary</h2>
+            <ul>
+                <li> <a href="Home">Home</a></li>
+                <li> <a href="About">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Discover the meaning of every word</h1>
+            <p>Search for a word and discover its meaning</p>
+        </section>
+        <section id="search-section">
+            <form id="search-form">
+                <input type="search" id="search-input" placeholder="Enter a word" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="word-of-day">
+            <h2>Word of the Day</h2>
+            <h3>Knowledge</h3>
+            <p>The fact or information about something</p>
+        </section>
+        <!-- Result section -->
+        <section id="dictionary-result">
+            <h2 id="word">Knowledge</h2>
+            <!-- <p id="pronunciation">Pronunciation:</p>
+            <p id="part-of-speech">Noun</p> -->
+            <div id="meaning">
+                <h3>Meaning</h3>
+                <p>Facts, information and skills acquired through experience or education</p>
+            </div>
+             <div id="synonyms">
+                <h3>Synonyms</h3>
+                <p>Information</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; 2026 online dictionary
+        </p>
+    </footer>
 </body>
+
 </html>

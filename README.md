@@ -1,1 +1,2 @@
 # Online-dictionary
+A responsive Single Page Dictionary Application built with HTML, CSS and JavaScript. Users can search words and explore definitions, pronunciation, synonyms and examples using a dictionary API

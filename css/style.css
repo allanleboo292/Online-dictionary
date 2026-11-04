@@ -75,3 +75,81 @@ nav ul li a:hover {
     background-color: #03499f;
     cursor: pointer;
 }
+#dictionary-result {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #dbe5f5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05)
+}
+#word-of-day {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    background-color: #e2edff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#word-of-day h2 {
+    color: #0860d4;
+    font-size: 22px;
+}
+
+#word-of-day h3 {
+    font-size: 23px;
+}
+
+#word-of-day p {
+    color: #475569;
+    font-style: italic;
+}
+#word {
+    font-size: 38px;
+    color: #14264b;
+    margin-bottom: 5px;
+}
+
+#pronunciation {
+    color: #64748b;
+    font-size: 17px;
+}
+
+#part-of-speech {
+    display: inline-block;
+    background-color: #e2edff;
+    color: #0860d4;
+    padding: 4px 15px;
+    border-radius: 20px;
+    margin: 10px 0 20px;
+}
+#meaning,
+#example,
+#synonyms {
+    margin-top: 20px;
+}
+
+#meaning h3,
+#example h3,
+#synonyms h3 {
+    color: #0860d4;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#meaning p,
+#example p,
+#synonyms p {
+    font-size: 16px;
+    color: #334155;
+}
+footer {
+    background-color: #e2edff;
+    text-align: center;
+    padding: 20px;
+    color: #475569;
+}

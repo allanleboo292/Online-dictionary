@@ -15,7 +15,7 @@
             <ul>
                 <li> <a href="Home">Home</a></li>
                 <li> <a href="About">About</a></li>
-                <li><a href="#">Favourite</a></li>
+                <li><a href="#favourites">Favourite</a></li>
             </ul>
         </nav>
     </header>
@@ -26,11 +26,7 @@
         </section>
         <section id="search-section">
             <form id="search-form">
-                <input 
-                type="search" 
-                id="search-input" 
-                placeholder="Enter a word" 
-                >
+                <input type="search" id="search-input" placeholder="Enter a word">
                 <button type="submit">Submit</button>
 
                 <p id="message"></p>
@@ -45,6 +41,10 @@
         <section id="dictionary-result">
             <h2 id="word"></h2>
             <p id="pronunciation"></p>
+
+            <audio id="pronunciation-audio" controls hidden>
+                Your browser does not support audio.
+            </audio>
             <p id="part-of-speech"></p>
             <div id="meaning">
                 <h3>Meaning</h3>
@@ -58,6 +58,10 @@
                 <h3>Synonyms</h3>
                 <p id="synonyms-text"></p>
             </div>
+        </section>
+        <section id="favourites">
+            <h2>My Favourite Words</h2>
+            <ul id="favourite-list"></ul>
         </section>
     </main>
     <footer>

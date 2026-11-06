@@ -8,6 +8,11 @@ const exampleText = document.getElementById("example-text")
 const synonymsText = document.getElementById("synonyms-text")
 const pronunciationAudio = document.getElementById("pronunciation-audio")
 const message = document.getElementById("message")
+
+const addFavouriteButton = document.getElementById("add-favourite");
+const favouriteList = document.getElementById("favourite-list");
+
+let currentWord = "";
 async function searchDictionary(searchedWord) {
     const API_URL = `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(searchedWord)}`;
 
@@ -25,8 +30,9 @@ async function searchDictionary(searchedWord) {
 }
 
 function displayResult(data) {
-
+    
     const result = data[0];
+    currentWord = result.word;
     word.textContent = result.word;
     pronunciation.textContent =
         "Pronunciation: " + (result.phonetic || "Not available");
@@ -75,3 +81,54 @@ searchForm.addEventListener("submit", async function (event) {
     displayResult(data);
     message.textContent = "";
 })
+
+let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+
+function displayFavourites(){
+    favouriteList.innerHTML = "";
+
+    favourites.forEach(function(favourite){
+        const listItem = document.createElement("li");
+        listItem.textContent = favourite + " ";
+
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+
+        removeButton.addEventListener("Click", function(){
+            favourites = favourites.filter(
+                word => word !== favourite
+            );
+            localStorage.setItem(
+                "favourites",
+                JSON.stringify(favourites)
+            );
+            displayFavourites();
+        });
+        listItem.appendChild(removeButton);
+        favouriteList.appendChild(listItem);
+    })
+}
+// Add current word to favourite
+
+addFavouriteButton.addEventListener("click", function(){
+    if(currentWord === ""){
+        return;
+    }
+    const alreadySaved = favourites.some(
+        favourites => favourites.toLowerCase() === currentWord.toLowerCase()
+    );
+    if (alreadySaved){
+        alert("This word is already in your favourites!");
+        return;
+    }
+    favourites.push(currentWord);
+
+    localStorage.setItem(
+        "favourites",
+        JSON.stringify(favourites)
+    );
+    displayFavourites();
+    alert("Word added to favourites!");
+
+})
+displayFavourites();

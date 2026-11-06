@@ -59,6 +59,17 @@ nav ul li a:hover {
     font-size: 18px;
     color: #64748b;
 }
+#about {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.7;
+}
+
+#about h2 {
+    margin-bottom: 20px;
+}
 
 #search-section {
     position: relative;
@@ -178,6 +189,50 @@ nav ul li a:hover {
 #synonyms p {
     font-size: 16px;
     color: #334155;
+}
+#favourites {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 35px 25px;
+    background-color: #f4f7fb;
+    border-radius: 12px;
+}
+#favourites h2 {
+    text-align: center;
+    color: #1e3a5f;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+#favourite-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+#favourite-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #dce5f2;
+    border-radius: 8px;
+    color: #333;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+#favourite-list button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#favourite-list button:hover {
+    background-color: #b02a37;
 }
 
 footer {

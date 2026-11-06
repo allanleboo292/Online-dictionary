@@ -45,6 +45,8 @@ function displayResult(data) {
     } else {
         pronunciationAudio.hidden = true
         pronunciationAudio.removeAttribute('src');
+
+        pronunciationAudio.load();
     }
     const meaning = result.meanings[0];
     partOfSpeech.textContent = meaning.partOfSpeech;

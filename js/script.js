@@ -91,14 +91,16 @@ function displayFavourites(){
 
     favourites.forEach(function(favourite){
         const listItem = document.createElement("li");
-        listItem.textContent = favourite + " ";
+        listItem.textContent = favourite;
 
         const removeButton = document.createElement("button");
         removeButton.textContent = "Remove";
 
-        removeButton.addEventListener("Click", function(){
-            favourites = favourites.filter(
-                word => word !== favourite
+        removeButton.addEventListener("click", function(){
+            console.log("Remove Clicked, favourite");
+            favourites = favourites.filter(function(word){
+                return word !== favourite
+            }
             );
             localStorage.setItem(
                 "favourites",
@@ -134,3 +136,5 @@ addFavouriteButton.addEventListener("click", function(){
 
 })
 displayFavourites();
+
+favouriteList.addEventListener

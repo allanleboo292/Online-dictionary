@@ -12,7 +12,12 @@ body {
 }
 
 header {
-    background-color: #0754b5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #1e3a5f;
     color: white;
 }
 
@@ -20,9 +25,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 15px 30px;
 }
-
 nav h2 {
     font-size: 25;
 }
